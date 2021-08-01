@@ -42,7 +42,7 @@ Caso o número esteja correto, e todos os outros campos também obedeçam a vali
 - O campo não pode ser vazio;
 
 ## Sobre a avaliação
-Abaixo está a lista do que será considerado por nós como características essenciais, além é claro do cumprimento do objetivo do teste.Ç
+Abaixo está a lista do que será considerado por nós como características essenciais, além é claro do cumprimento do objetivo do teste.
 - Boas práticas;
 - Código limpo e legível;
 - Força de vontade;
