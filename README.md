@@ -50,7 +50,7 @@ Abaixo está a lista do que será considerado por nós como características ess
 **Notas:** O design/layout das páginas **não será** considerado na avaliação;
 
 ## Sobre os próximos passos
-O teste deve ser realizado em um prazo de até 2 dias e após a finalização, o link do repositório deve ser enviado para os e-mails [felipe.mathais@zankh.com.br](felipe.mathais@zankh.com.br) e [victor.zampieri@zankh.com.br](victor.zampieri@zankh.com.br).
+O teste deve ser realizado em um prazo de até 2 dias e após a finalização, o link do repositório deve ser enviado para os e-mails [felipe.mathais@zankh.com.br](felipe.mathais@zankh.com.br) e [victor@zankh.com.br](victor@zankh.com.br).
 
 Após a confirmação do recebimento, será marcada a apresentação do teste para a nossa equipe.
 
