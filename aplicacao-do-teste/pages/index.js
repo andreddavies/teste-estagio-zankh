@@ -20,7 +20,23 @@ export default function Home() {
       return true;
     }
   }
-   
+
+  const cardNumberValidation = (i) => {
+    const cardNumberExpression = /\d{4}\s\d{4}\s\d{4}\s\d{4}/;
+    const v = i.currentTarget.value;
+    const justNumbers = justNumbersMask(i);  
+
+    if(justNumbers){
+      cardNumberInput.current.className = "errorInput";
+    }else{
+      !cardNumberExpression.test(cardNumberInput.current.value)
+      ? cardNumberInput.current.className = "inputAtom"
+      : cardNumberInput.current.className = "acceptedInput"
+    }
+    
+    if (v.length == 4 || v.length == 9 || v.length == 14) i.currentTarget.value += " ";
+  }
+
   return (
     <div>
       <Head>
