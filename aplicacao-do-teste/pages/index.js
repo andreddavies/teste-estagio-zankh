@@ -1,8 +1,17 @@
+import React from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head'
 import MyApp from './_app.js';
 
 
 export default function Home() {
+  const router = useRouter();
+  const cardNumberInput = React.useRef();
+  const dueDateInput = React.useRef();
+  const verificationCodeInput = React.useRef();
+  const cardHolderNameInput = React.useRef();
+  const buyButton = React.useRef();
+  
   return (
     <div>
       <Head>
@@ -14,7 +23,15 @@ export default function Home() {
       <main>
         <div style={{margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column"}}>
         <h1>Cadastro</h1>
-          <form className="formMolecule">
+          <form onSubmit={function validator(e){
+            e.preventDefault();
+
+            if(cardNumberInput.current.value == "5477 1831 6736 7405"){
+              router.push('/success');
+            }else{
+              router.push('/tryAgain');
+            }
+          }} className="formMolecule">
             <input 
               ref={cardNumberInput}
               onKeyDown={(i)=>cardNumberValidation(i)}
