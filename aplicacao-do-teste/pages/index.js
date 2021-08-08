@@ -36,7 +36,7 @@ export default function Home() {
     }
     
     if (v.length == 4 || v.length == 9 || v.length == 14) i.currentTarget.value += " ";
-    
+    validationAll();
   }
 
   const dueDateValidation = (i) => {
@@ -52,7 +52,7 @@ export default function Home() {
       : dueDateInput.current.className = "acceptedInput"
     }
     if (v.length == 2) i.currentTarget.value += "/";
-    
+    validationAll();
   }
 
   const verificationCodeValidation = (i) => {
@@ -67,7 +67,7 @@ export default function Home() {
       ? verificationCodeInput.current.className = "inputAtom"
       : verificationCodeInput.current.className = "acceptedInput"
     }
-    
+    validationAll();
   }
 
   const cardHolderNameValidation = (i) => {
@@ -80,7 +80,14 @@ export default function Home() {
       }else{
         cardHolderNameInput.current.className = "acceptedInput"
       }
-      
+      validationAll();
+  }
+
+  const validationAll = () => {
+    if(cardNumberInput.current.className == "acceptedInput" && dueDateInput.current.className == "acceptedInput" && verificationCodeInput.current.className == "acceptedInput" && cardHolderNameInput.current.className == "acceptedInput"){
+        buyButton.current.className = "greenButtonAtom";
+        buyButton.current.disabled = false;
+    }    
   }
 
   return (
