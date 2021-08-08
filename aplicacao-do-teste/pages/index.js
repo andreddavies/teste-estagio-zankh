@@ -11,7 +11,16 @@ export default function Home() {
   const verificationCodeInput = React.useRef();
   const cardHolderNameInput = React.useRef();
   const buyButton = React.useRef();
-  
+
+  function justNumbersMask(i){   
+    var v = i.currentTarget.value;
+    
+    if(isNaN(v[v.length-1])){
+      i.currentTarget.value = v.substring(0, v.length-1);
+      return true;
+    }
+  }
+   
   return (
     <div>
       <Head>
