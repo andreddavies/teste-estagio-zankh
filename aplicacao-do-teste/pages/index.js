@@ -12,6 +12,7 @@ export default function Home() {
   const cardHolderNameInput = React.useRef();
   const buyButton = React.useRef();
 
+
   function justNumbersMask(i){   
     var v = i.currentTarget.value;
     
@@ -35,6 +36,51 @@ export default function Home() {
     }
     
     if (v.length == 4 || v.length == 9 || v.length == 14) i.currentTarget.value += " ";
+    
+  }
+
+  const dueDateValidation = (i) => {
+    const dueDateExpression = /\d{2}\/\d{2}/;
+    const v = i.currentTarget.value;
+    const justNumbers = justNumbersMask(i);  
+
+    if(justNumbers){
+      dueDateInput.current.className = "errorInput";
+    }else{
+      !dueDateExpression.test(dueDateInput.current.value)
+      ? dueDateInput.current.className = "inputAtom"
+      : dueDateInput.current.className = "acceptedInput"
+    }
+    if (v.length == 2) i.currentTarget.value += "/";
+    
+  }
+
+  const verificationCodeValidation = (i) => {
+    const verificationCodeExpression = /\d{3}$/;
+    const v = i.currentTarget.value;
+    const justNumbers = justNumbersMask(i);  
+
+    if(justNumbers){
+      verificationCodeInput.current.className = "errorInput";
+    }else{
+      !verificationCodeExpression.test(verificationCodeInput.current.value)
+      ? verificationCodeInput.current.className = "inputAtom"
+      : verificationCodeInput.current.className = "acceptedInput"
+    }
+    
+  }
+
+  const cardHolderNameValidation = (i) => {
+    const cardHolderNameExpression = /^[a-zA-Z\u00C0-\u017F´]+(\s+[a-zA-Z\u00C0-\u017F´]{0,})+$/;
+    const v = i.currentTarget.value;
+      
+      if(!cardHolderNameExpression.test(cardHolderNameInput.current.value)){
+        cardHolderNameInput.current.className = "errorInput";
+        console.log("Digitar nome corretamente");
+      }else{
+        cardHolderNameInput.current.className = "acceptedInput"
+      }
+      
   }
 
   return (
