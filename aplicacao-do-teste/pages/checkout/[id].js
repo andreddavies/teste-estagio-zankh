@@ -133,7 +133,7 @@ export default function Checkout () {
 							className="inputAtom"
 							placeholder="Número do cartão"
 							maxLength="19"
-							///required 
+							required 
 			            /><span id="cardNumberErr" className="errSpan">O número do cartão deve conter 16 dígitos</span>
 			            <input
 			            	id="dueDate" 
@@ -143,7 +143,7 @@ export default function Checkout () {
 							className="inputAtom"
 							placeholder="Data de vencimento"
 							maxLength="5"
-							//required 
+							required 
 			            /><span id="dueDateErr" className="errSpan">Data de vencimento deve ser maior que a atual</span>
 			            <input 
 							ref={verificationCodeInput}
@@ -152,7 +152,7 @@ export default function Checkout () {
 							className="inputAtom"
 							placeholder="CVV"
 							maxLength="3"
-							//required 
+							required 
 			            /><span id="verificationCodeErr" className="errSpan">Número de verificação deve ser os 3 dígitos atrás do cartão</span>
 			            <input 
 							ref={cardHolderNameInput}
@@ -160,7 +160,7 @@ export default function Checkout () {
 							type="text"
 							className="inputAtom"
 							placeholder="Nome completo do portador do cartão"
-							//required 
+							required 
 			            /><span id="cardHolderNameErr" className="errSpan">Nome do portador deve conter o nome completo</span>
 	            		<button ref={buyButton} type="submit" className="disabledBuyButton" disabled>Finalizar Compra</button>
 	          		</form>
