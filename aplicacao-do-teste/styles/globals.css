@@ -14,12 +14,22 @@ a {
 * {
   box-sizing: border-box;
 }
-.errorInput{
-	margin: 10px;
-	padding: 10px 8px;
-	border: 2px solid red;
+
+
+/* Classes de botões */
+
+.tryAgainButton{
+	color: white;
+	background: #0070CC;
+	width: 90%;
+	text-align: center;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 40px;
+	padding: 8px;
+	border: 0;
 	border-radius: 8px;
-	outline: 0;
 	box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.4);
 }
 .disabledBuyButton{
@@ -46,6 +56,27 @@ a {
 	border-radius: 8px;
 	box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.4);
 }
+
+
+/* Classes de inputs, span e form */
+
+
+.errSpan{
+	display: none;
+	color: white;
+	background: red;
+	padding: 8px 10px;
+	border-radius: 10px;
+}
+.errorInput{
+	margin: 10px;
+	padding: 10px 8px;
+	border: 2px solid red;
+	border-radius: 8px;
+	outline: 0;
+	box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.4);
+}
+
 .acceptedInput{
 	margin: 10px;
 	padding: 10px 8px;
@@ -67,4 +98,52 @@ a {
 	margin: 0 auto;
 	display: flex; 
 	flex-direction: column;
+}
+
+
+/* Header component style */
+
+.headerComponent{
+	background: #00439C;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.logo{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+.headerNav{
+	width: 50%;
+}
+.navLinkList{
+	width: 100%;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.navLinkList li{
+	margin: 0 10px;
+}
+.headerNavLink{
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+/* Footer component style */
+
+.footerContainer{
+	color: white;
+	font-weight: bold;
+	background: #00439C;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
